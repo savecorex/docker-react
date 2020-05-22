@@ -11,7 +11,7 @@ script:
 language: generic
 
 deploy:
-    provide: elastickbeanstalk
+    provide: elasticbeanstalk
     region: "eu-central-1"
     app: "dockreact"
     env: "dockreact-env"
