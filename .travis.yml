@@ -1,3 +1,4 @@
+language: generic
 sudo: required
 services:
     - docker
@@ -8,13 +9,11 @@ before_install:
 script:
     - docker run -e CI=true docker-react npm run test -- --coverage
 
-language: generic
-
 deploy:
     provide: elasticbeanstalk
     region: "eu-central-1"
     app: "dockreact"
-    env: "dockreact-env"
+    env: "Dockreact-env"
     bucket_name: "elasticbeanstalk-eu-central-1-123101515564"
     bucket_path: "dockreact"
     on:
